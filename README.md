@@ -1,5 +1,5 @@
-<img src="https://static.wikia.nocookie.net/minecraft_gamepedia/images/9/9f/Carved_Pumpkin_%28S%29_JE2.png" style="display: block; margin: 50px auto;" alt="Lorecrypt">
-<h1 style="text-align: center; font-family: cursive; font-weight: bold; "><a href="https://afd.ulc.world/">LORECRYPT</a></h1>
+<p align="center"><img src="https://static.wikia.nocookie.net/minecraft_gamepedia/images/9/9f/Carved_Pumpkin_%28S%29_JE2.png" style="display: block; margin: 50px auto;" alt="Lorecrypt"></p>
+<h1 align="center"><a href="https://afd.ulc.world/">LORECRYPT</a></h1>
 
 Lorecrypt is a 2024 sandbox game developed by uLcdia and originally released in 2009.
 
