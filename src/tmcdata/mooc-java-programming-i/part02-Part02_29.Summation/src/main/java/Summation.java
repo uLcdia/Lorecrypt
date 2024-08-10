@@ -1,8 +1,11 @@
 public class Summation {
 
-    public static int sum(int num1, int num2, int num3, int num4) {
-        // write some code here
-        return -1;
+    public static int sum(int... numbers) {
+        int total = 0;
+        for (int number : numbers) {
+            total += number;
+        }
+        return total;
     }
 
     public static void main(String[] args) {
