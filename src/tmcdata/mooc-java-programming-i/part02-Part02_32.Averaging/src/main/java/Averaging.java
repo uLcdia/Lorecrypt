@@ -1,15 +1,16 @@
 
 public class Averaging {
 
-    // implement the sum method here again
-    public static int sum(int number1, int number2, int number3, int number4) {
-        // write some code here
-        return 0;
+    public static int sum(int... numbers) {
+        int total = 0;
+        for (int number : numbers) {
+            total += number;
+        }
+        return total;
     }
 
-    public static double average(int number1, int number2, int number3, int number4) {
-        //write some code here
-        return -1;
+    public static double average(int... numbers) {
+        return (double) sum(numbers) / numbers.length;
     }
 
     public static void main(String[] args) {
