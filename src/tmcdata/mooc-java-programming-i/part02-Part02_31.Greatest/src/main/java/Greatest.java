@@ -1,10 +1,14 @@
 
 public class Greatest {
 
-    public static int greatest(int number1, int number2, int number3) {
-        //write some code here
-
-        return -1;
+    public static int greatest(int... numbers) {
+        int greatest = numbers[0];
+        for (int number : numbers) {
+            if (number > greatest) {
+                greatest = number;
+            }
+        }
+        return greatest;
     }
 
     public static void main(String[] args) {
