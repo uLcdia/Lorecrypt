@@ -18,5 +18,8 @@ public class IoobProgram {
             System.out.println(line);
         }
 
+        @SuppressWarnings("unused")
+        String exception = lines.get(lines.size());
+
     }
 }
