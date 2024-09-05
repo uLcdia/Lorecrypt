@@ -17,5 +17,11 @@ public class RememberTheseNumbers {
             numbers.add(luku);
         }
 
+        scanner.close();
+
+        for (int item : numbers) {
+            System.out.println(item);
+        }
+
     }
 }
