@@ -17,5 +17,9 @@ public class LastInList {
             list.add(input);
         }
 
+        scanner.close();
+
+        System.out.println(list.get(list.size() - 1)); // cannot find symbol; symbol:   method getLast()
+
     }
 }
