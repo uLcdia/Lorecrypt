@@ -7,4 +7,8 @@ public class Sum {
         // Try your method here
     }
 
+    public static int sum(ArrayList<Integer> numbers) {
+        return numbers.stream().mapToInt(Integer::intValue).sum();
+    }
+
 }
