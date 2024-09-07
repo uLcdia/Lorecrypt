@@ -17,6 +17,8 @@ public class Login {
         System.out.println("Enter password: ");
         String password = scanner.nextLine();
 
+        scanner.close();
+
         if (userCredentials.containsKey(username) && userCredentials.get(username).equals(password)) {
             System.out.println("You have successfully logged in!");
         } else {
