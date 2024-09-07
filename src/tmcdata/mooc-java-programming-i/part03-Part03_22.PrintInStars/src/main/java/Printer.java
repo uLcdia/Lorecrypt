@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 public class Printer {
 
@@ -8,7 +9,12 @@ public class Printer {
     }
 
     public static void printArrayInStars(int[] array) {
-        // Write some code in here
+        Arrays.stream(array)
+              .forEach(Printer::printStars);
     }
 
+    private static void printStars(int count) {
+        System.out.print("*".repeat(count));
+        System.out.println();
+    }
 }
