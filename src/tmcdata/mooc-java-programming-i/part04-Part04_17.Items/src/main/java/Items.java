@@ -10,5 +10,19 @@ public class Items {
         ArrayList<Item> items = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
 
+        while (true) {
+            String item = scanner.nextLine();
+            if (item.isEmpty()) {
+                break;
+            }
+            items.add(new Item(item));
+        }
+
+        scanner.close();
+
+        for (Item item : items) {
+            System.out.println(item);
+        }
+
     }
 }
