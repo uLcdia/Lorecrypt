@@ -2,6 +2,8 @@
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.nio.file.Files;
+import java.io.IOException;
 
 public class GuestListFromAFile {
 
@@ -13,6 +15,16 @@ public class GuestListFromAFile {
 
         ArrayList<String> list = new ArrayList<>();
         // implement reading the file here.
+
+        try {
+            Files.lines(Paths.get(file))
+            .forEach(list::add);
+        } catch (IOException e) {
+            e.printStackTrace();
+            scanner.close();
+            return;
+        }
+
         System.out.println("");
 
         System.out.println("Enter names, an empty line quits.");
@@ -28,6 +40,8 @@ public class GuestListFromAFile {
                 System.out.println("The name is not on the list.");
             }
         }
+
+        scanner.close();
 
         System.out.println("Thank you!");
     }
