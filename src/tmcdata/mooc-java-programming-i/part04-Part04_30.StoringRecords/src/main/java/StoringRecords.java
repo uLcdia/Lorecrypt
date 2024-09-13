@@ -1,4 +1,5 @@
 
+import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -10,6 +11,8 @@ public class StoringRecords {
 
         System.out.println("Filename:");
         String file = scan.nextLine();
+
+        scan.close();
 
         ArrayList<Person> records = readRecordsFromFile(file);
         System.out.println("Persons: " + records.size());
@@ -25,6 +28,19 @@ public class StoringRecords {
 
         // Write here the code for reading from file
         // and printing the read records
+
+        try {
+            Files.lines(Paths.get(file))
+                 .map(line -> line.split(","))
+                 .forEach(parts -> {
+                    String name = parts[0].trim();
+                    int ageString = Integer.parseInt(parts[1].trim());
+                    persons.add(new Person(name, ageString));
+                 });
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         return persons;
 
     }
