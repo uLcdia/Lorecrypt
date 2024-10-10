@@ -10,4 +10,18 @@ public class Menu {
     }
 
     // implement the required methods here
+
+    public void addMeal(String meal) {
+        if (!this.meals.contains(meal)) {
+            this.meals.add(meal);
+        }
+    }
+
+    public void printMeals() {
+        meals.forEach(System.out::println);
+    }
+
+    public void clearMenu() {
+        meals.clear();
+    }
 }
