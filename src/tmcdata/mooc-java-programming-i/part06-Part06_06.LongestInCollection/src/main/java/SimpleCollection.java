@@ -1,5 +1,6 @@
 
 import java.util.ArrayList;
+import java.util.Comparator;
 
 public class SimpleCollection {
 
@@ -17,6 +18,12 @@ public class SimpleCollection {
 
     public ArrayList<String> getElements() {
         return this.elements;
+    }
+
+    public String longest() {
+        return this.elements.stream()
+            .max(Comparator.comparingInt(String::length))
+            .orElse(null);
     }
 
 }
