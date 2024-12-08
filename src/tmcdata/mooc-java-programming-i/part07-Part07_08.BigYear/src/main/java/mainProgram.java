@@ -9,7 +9,9 @@ public class mainProgram {
         // as a parameter
 
         Scanner scan = new Scanner(System.in);
-
+        Database database = new Database();
+        UserInterface ui = new UserInterface(scan, database);
+        ui.start();
     }
 
 }
